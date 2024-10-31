@@ -117,8 +117,8 @@ $(document).ready(function() {
         $('.language-titleText').css('borderColor', 'white')
       
         $('.changeThemeBTN div').css('left', '23px')
-    } else if(localStorage.getItem('themechange_localization') === 'white'){
-     
+    } else {
+        localStorage.setItem('themechange_localization', 'white')
         $('.header').css('borderBottom', 'transparent 2px solid')
         $('.wrap').css('backgroundColor', 'transparent')
         $('.language-titleText, .language-hello').css('color', 'black')
@@ -144,7 +144,7 @@ $(document).ready(function() {
             $('.wrap').css('backgroundColor', 'rgb(26, 26, 26)');
             $('.language-titleText, .language-hello').css('color', 'white');
             $('.language-titleText').css('borderColor', 'white');
-        } else {
+        } else if(newTheme === 'white'){
             $('.header').css('borderBottom', 'transparent 2px solid');
             $('.wrap').css('backgroundColor', 'transparent');
             $('.language-titleText, .language-hello').css('color', 'black');
